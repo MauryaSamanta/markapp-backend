@@ -10,5 +10,5 @@ const TStudentSchema = new mongoose.Schema({
   Batch: { type: String, required: true }
 });
 
-const TStudent = mongoose.model('TStudent', TStudentSchema);
+const TStudent = mongoose.model('TStudents', TStudentSchema);
 export default TStudent;

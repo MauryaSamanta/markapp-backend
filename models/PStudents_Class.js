@@ -9,5 +9,5 @@ const PStudentClassSchema = new mongoose.Schema({
   Batch: { type: String, required: true },
 });
 
-const PStudentClass = mongoose.model('PStudentClass', PStudentClassSchema);
+const PStudentClass = mongoose.model('PStudents_Class', PStudentClassSchema);
 export default PStudentClass;
