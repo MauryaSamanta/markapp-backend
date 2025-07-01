@@ -7,6 +7,7 @@ import PStudent from '../models/PStudents.js';
 export const getAllTStudents = async (req, res) => {
   try {
     const students = await TStudent.find({});
+    // console.log(students)
     res.status(200).json(students);
   } catch (err) {
     console.error('Error fetching TStudents:', err);

@@ -7,6 +7,8 @@ const TStudentClassSchema = new mongoose.Schema({
   STATUS: { type: String, required: true },
   Teacher: { type: String, required: true },
   Batch: { type: String, required: true }
+}, {
+  collection: "TStudents_Class"  
 });
 
 const TStudentClass = mongoose.model('TStudents_Class', TStudentClassSchema);

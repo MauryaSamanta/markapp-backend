@@ -8,7 +8,9 @@ const TStudentSchema = new mongoose.Schema({
   Noclass: { type: Number, required: true },
   Present: { type: Number, required: true },
   Batch: { type: String, required: true }
+}, {
+  collection: "TStudents"  
 });
 
-const TStudent = mongoose.model('TStudents', TStudentSchema);
+const TStudent = mongoose.model("TStudents", TStudentSchema);
 export default TStudent;

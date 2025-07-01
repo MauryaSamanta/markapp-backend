@@ -5,6 +5,7 @@ import TStudent from '../models/TStudents.js';
 export const getall=async(req,res)=>{
   try {
     const students = await TStudent.find({});
+    console.log(students);
     res.status(200).json(students);
   } catch (error) {
     

@@ -7,6 +7,8 @@ const PStudentClassSchema = new mongoose.Schema({
   STATUS: { type: String, required: true }, // Use Boolean if it's always 0/1
   Teacher: { type: String, required: true },
   Batch: { type: String, required: true },
+}, {
+  collection: "PStudents_Class"  
 });
 
 const PStudentClass = mongoose.model('PStudents_Class', PStudentClassSchema);

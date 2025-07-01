@@ -8,6 +8,8 @@ const PStudentSchema = new mongoose.Schema({
   Noclass: { type: Number, required: true },
   Present: { type: Number, required: true },
   Batch: { type: String, required: true }
+}, {
+  collection: "PStudents"  
 });
 
 const PStudent = mongoose.model('PStudents', PStudentSchema);
