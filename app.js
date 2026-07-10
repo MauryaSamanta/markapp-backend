@@ -12,10 +12,12 @@ const PORT = process.env.PORT || 5000;
 app.use(cors())
 // Middleware
 app.use(express.json());
+dotenv.config();
 
+// console.log("Mongo URI =", process.env.MONGODB_URI);
 // MongoDB Connection
 mongoose
-  .connect(process.env.MONGODB_URI,{
+  .connect(process.env.MONGODB_UR,{
   useNewUrlParser: true,
   useUnifiedTopology: true,
   dbName: 'Attendance',
