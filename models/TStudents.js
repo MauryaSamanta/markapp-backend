@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 
 const TStudentSchema = new mongoose.Schema({
   NameStud: { type: String, required: true },
-  RollNo: { type: String, required: true },
+  RollNo: { type: String, required: true }, //"V/2026/001"
   Attper: { type: Number, required: true },
   Noclass: { type: Number, required: true },
   Present: { type: Number, required: true },
