@@ -10,11 +10,7 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors({
-  origin: "https://markapp-client.vercel.app",
-  methods: ["GET","POST","PUT","DELETE","OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"]
-}));
+app.use(cors());
 
 const PORT = process.env.PORT || 5000;
 

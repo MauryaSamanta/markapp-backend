@@ -10,10 +10,14 @@ export const getAllTStudents = async (req, res) => {
         $addFields: {
           rollDigits: {
             $toInt: {
-              $arrayElemAt: [
-                { $split: ["$RollNo", "/"] },
-                -1
-              ]
+              $trim: {
+                input: {
+                  $arrayElemAt: [
+                    { $split: ["$RollNo", "/"] },
+                    -1
+                  ]
+                }
+              }
             }
           }
         }
@@ -33,7 +37,6 @@ export const getAllTStudents = async (req, res) => {
   }
 };
 
-// controllers/studentController.js (same file as above)
 
 export const getPStudentsByBatch = async (req, res) => {
   try {
@@ -51,10 +54,14 @@ export const getPStudentsByBatch = async (req, res) => {
         $addFields: {
           rollDigits: {
             $toInt: {
-              $arrayElemAt: [
-                { $split: ["$RollNo", "/"] },
-                -1
-              ]
+              $trim: {
+                input: {
+                  $arrayElemAt: [
+                    { $split: ["$RollNo", "/"] },
+                    -1
+                  ]
+                }
+              }
             }
           }
         }
